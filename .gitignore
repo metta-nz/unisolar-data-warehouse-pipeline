@@ -1,0 +1,127 @@
+# ==============================================================================
+# 1. PYTHON RUNTIME & VIRTUAL ENVIRONMENTS
+# ==============================================================================
+# Virtual environment directories (Keep local environments off version control)
+.venv/
+.venv_dw/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / Optimized Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution and packaging build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==============================================================================
+# 2. JUPYTER NOTEBOOKS & IDE CONFIGURATIONS
+# ==============================================================================
+# Jupyter checkpoint caches
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Visual Studio Code workspace settings
+.vscode/
+*.code-workspace
+
+# JetBrains / PyCharm settings (if applicable)
+.idea/
+
+# ==============================================================================
+# 3. SECURITY, CREDENTIALS & SECRETS (AZURE / CLOUD / DB)
+# ==============================================================================
+# Environment variable definitions containing sensitive API keys & tokens
+.env
+.env.*
+!.env.example
+
+# Cryptographic keys, certificates, and access tokens
+*.pem
+*.key
+*.cert
+credentials.json
+client_secrets.json
+connection_strings.txt
+*secret*
+
+# ==============================================================================
+# 4. DATA LAKEHOUSE MEDALLION TIERS (LARGE DATASET BLOCKS: 15-20MB+)
+# ==============================================================================
+# Exclude full physical datasets across all local Medallion storage layers
+data/raw/*
+data/clean/*
+data/dq_log/*
+data/curated/*
+data/logs/*
+
+# Global exclusion for heavy analytical and binary data formats
+*.csv
+*.parquet
+*.json
+*.avro
+*.orc
+*.feather
+*.h5
+*.tsv
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.sqlite3
+
+# ==============================================================================
+# 5. SAMPLE DATASET EXCEPTION (FOR PUBLIC PORTFOLIO REPRODUCTION)
+# ==============================================================================
+# Allow small sample files (10-100 rows) for peer review and grading reproduction
+!data/sample/
+!data/sample/*
+!.gitkeep
+
+# ==============================================================================
+# 6. BI ARTIFACTS & LARGE BINARIES
+# ==============================================================================
+# Uncomment if Power BI (.pbix) files exceed GitHub recommended limit (>50MB)
+# reports/*.pbix
+
+# ==============================================================================
+# 7. OPERATING SYSTEM ARTIFACTS
+# ==============================================================================
+# Microsoft Windows system files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+Desktop.ini
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Linux system artifacts
+*~
+.directory
